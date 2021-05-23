@@ -1,0 +1,78 @@
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Trabalho II</title>
+        <meta http-equiv="CONTENT-LANGUAGE" content="Portuguese" />
+        <meta name="copyright" 	content="Trabalho II" />
+        <meta name="title" 	content="Trabalho II" />
+        <meta name="author" 	content="Trabalho II" />
+		<meta name="description" content="Trabalho II" />
+        <meta name="keywords" content="Trabalho II" />
+        <meta name="viewport" content="width=320, initial-scale=1">
+        			
+		<link type="text/css" rel="stylesheet" href="./css/main.css" /> <!-- tema padrao -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	</head>
+<body style="background-image: url(./image/fundo.jpg);">
+    <header class="header">
+        <div class="nav">
+            <img width="100" src="./image/logo.png" alt="">
+            <nav class="home">
+                <ul>
+                    <li class="active"> <a href="#">Nosso Cardápio</a> </li>
+                    <li class="active"><a href="#dois">Faça seu pedido</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="miolo">
+        <div class="container">
+            <div class="menu">
+                <h2>Nosso Cardápio</h2>
+                <table id="tabela"></table>
+            </div>
+            <div class="escolhersabor">
+                <h2>Faça seu pedido</h2>
+                <select onchange="changeSabor()" id="qtdsabor">
+                    <option value="1">Escolha Quantos Sabores</option>
+                    <option value="1">1 Sabor</option>
+                    <option value="2">2 Sabores</option>
+                    <option value="3">3 Sabores</option>
+                </select>
+            </div>
+            <div id="dois" class="box-list">
+                <div class="product">
+                    <div class="product_box" id="product1" style="display: block;">
+                        <h3>Apenas 1 Sabor</h3>
+                    </div>
+                    <div class="product_box" id="product2">
+                        <h3>Apenas 2 Sabores</h3>
+                    </div>
+                    <div class="product_box" id="product3">
+                        <h3>Apenas 3 Sabores</h3>
+                    </div>
+                    <div class="product_detail">
+                        <select class="sabores" id="sabor1" style="display: block;">
+                            <option value="#">----Selecione o sabor-----</option>
+                        </select>
+                        <select class="sabores" id="sabor2">
+                            <option value="2">----Selecione o sabor-----</option>
+                        </select>
+                        <select class="sabores" id="sabor3">
+                            <option value="3">----Selecione o sabor-----</option>
+                        </select>
+                        <table id="pedido"></table>
+                        <button class="btn" onclick="montarPedido()">Montar Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.7/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
